@@ -18,7 +18,7 @@ export default function About() {
                         </div>
                         {/* Decorative Elements */}
                         <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-500/20 rounded-2xl -z-10" />
-                        <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary-500/20 rounded-2xl -z-10" />
+                        <div className="absolute -top-6 -left-6 w-32 h-32 bg-gray-200 rounded-2xl -z-10" />
                     </div>
 
                     {/* Content Side */}

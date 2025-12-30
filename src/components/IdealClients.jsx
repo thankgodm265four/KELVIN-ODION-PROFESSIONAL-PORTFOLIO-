@@ -57,7 +57,7 @@ export default function IdealClients() {
                                 key={index}
                                 className="flex items-center gap-4 bg-white p-5 rounded-xl border border-gray-100 hover:border-gold-500 hover:shadow-md transition-all duration-300 group"
                             >
-                                <div className="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500 group-hover:bg-gold-500 group-hover:text-white transition-all duration-300">
+                                <div className="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-white transition-all duration-300">
                                     {client.icon}
                                 </div>
                                 <p className="text-gray-700 font-medium">

@@ -82,7 +82,7 @@ export default function Services() {
                             key={index}
                             className="card group"
                         >
-                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/10 to-navy-500/10 flex items-center justify-center text-primary-500 mb-6 group-hover:bg-gold-500 group-hover:text-white transition-all duration-300">
+                            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold-500/10 to-gray-500/10 flex items-center justify-center text-gold-500 mb-6 group-hover:bg-gold-500 group-hover:text-white transition-all duration-300">
                                 {service.icon}
                             </div>
                             <h3 className="text-xl font-display font-semibold text-navy-500 mb-3">

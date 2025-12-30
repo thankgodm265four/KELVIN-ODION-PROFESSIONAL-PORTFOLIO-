@@ -49,13 +49,13 @@ export default function Process() {
                                 className="relative pl-20 md:pl-24 group"
                             >
                                 {/* Number Circle */}
-                                <div className="absolute left-0 top-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary-500 to-navy-500 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-gold transition-shadow duration-300">
+                                <div className="absolute left-0 top-0 w-14 h-14 rounded-full bg-gradient-to-br from-gold-500 to-gray-800 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-gold transition-shadow duration-300">
                                     {step.number}
                                 </div>
 
                                 {/* Connector Line */}
                                 {index < steps.length - 1 && (
-                                    <div className="absolute left-7 top-14 w-0.5 h-full bg-gradient-to-b from-primary-500/50 to-transparent" />
+                                    <div className="absolute left-7 top-14 w-0.5 h-full bg-gradient-to-b from-gold-500/50 to-transparent" />
                                 )}
 
                                 {/* Content */}

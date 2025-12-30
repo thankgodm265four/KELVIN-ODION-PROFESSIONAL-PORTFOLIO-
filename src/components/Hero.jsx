@@ -10,19 +10,19 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-white via-gray-50 to-primary-50 overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-0 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-navy-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-0 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gray-50/50 rounded-full blur-3xl" />
       </div>
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
+      <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(#1E3A5F 1px, transparent 1px),
-                           linear-gradient(90deg, #1E3A5F 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(#F2B233 1px, transparent 1px),
+                           linear-gradient(90deg, #F2B233 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }} />
       </div>
@@ -65,17 +65,17 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-8 md:gap-12 mt-16 pt-8 border-t border-gray-200 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-wrap gap-8 md:gap-12 mt-16 pt-8 border-t border-gray-100 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary-500">5+</p>
+              <p className="text-3xl md:text-4xl font-bold text-gold-500">5+</p>
               <p className="text-sm text-gray-500">Years Experience</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary-500">20+</p>
+              <p className="text-3xl md:text-4xl font-bold text-gold-500">20+</p>
               <p className="text-sm text-gray-500">Brands Transformed</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-primary-500">100%</p>
+              <p className="text-3xl md:text-4xl font-bold text-gold-500">100%</p>
               <p className="text-sm text-gray-500">Client Satisfaction</p>
             </div>
           </div>

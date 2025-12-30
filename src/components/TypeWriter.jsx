@@ -47,7 +47,7 @@ export default function TypeWriter({
 
     return (
         <span className="inline-flex items-center">
-            <span className="text-primary-500">{displayText}</span>
+            <span className="text-gold-600">{displayText}</span>
             <span className="typing-cursor" />
         </span>
     );

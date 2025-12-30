@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-500 text-white py-12">
+    <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Brand */}
@@ -20,7 +20,7 @@ export default function Footer() {
               href="https://wa.me/2349047493716"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500 transition-colors"
+              className="w-10 h-10 rounded-full bg-gold-50 flex items-center justify-center text-gold-600 hover:bg-gold-500 hover:text-white transition-all duration-300"
               aria-label="WhatsApp"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@ export default function Footer() {
             </a>
             <a
               href="mailto:Kelvin.odion1030@yahoo.com"
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 transition-colors"
+              className="w-10 h-10 rounded-full bg-gold-50 flex items-center justify-center text-gold-600 hover:bg-gold-500 hover:text-white transition-all duration-300"
               aria-label="Email"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,10 +40,10 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-center md:text-right">
-            <p className="text-sm text-white/60">
+            <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} Vinsurge Tech. All rights reserved.
             </p>
-            <p className="text-xs text-white/40 mt-1">
+            <p className="text-xs text-gray-400 mt-1">
               Available for local & international clients
             </p>
           </div>
