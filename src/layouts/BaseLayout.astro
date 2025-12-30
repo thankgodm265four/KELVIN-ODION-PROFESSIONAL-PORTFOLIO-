@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Kelvin Odion - Digital Growth Strategist helping brands grow visibility, engagement, and revenue through strategy-driven content, copywriting, and digital marketing systems.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1E3A5F" />
+    <meta name="author" content="Kelvin Odion" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content={`${title} | Kelvin Odion - Vinsurge Tech`}
+    />
+    <meta property="og:description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title} | Kelvin Odion - Digital Growth Strategist</title>
+  </head>
+  <body class="min-h-screen bg-white">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>

@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation';
+import StatsCounter from '../components/StatsCounter';
+import Footer from '../components/Footer';
+
+const teamMembers = [
+  {
+    name: "Alexandra Chen",
+    role: "Founder & CEO",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    bio: "25+ years of luxury real estate experience. Forbes recognized real estate leader."
+  },
+  {
+    name: "Michael Torres",
+    role: "Senior Luxury Specialist",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    bio: "Specialist in waterfront and estate properties. Over $500M in career sales."
+  },
+  {
+    name: "Sarah Williams",
+    role: "Client Relations Director",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+    bio: "Dedicated to creating exceptional client experiences and lasting relationships."
+  },
+  {
+    name: "David Park",
+    role: "Investment Strategist",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    bio: "Expert in real estate investment analysis and portfolio optimization."
+  }
+];
+
+const values = [
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    title: "Integrity",
+    description: "We maintain the highest ethical standards in every transaction and relationship."
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    title: "Excellence",
+    description: "We strive for perfection in every aspect of our service delivery."
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`,
+    title: "Client Focus",
+    description: "Your goals and dreams are at the center of everything we do."
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>`,
+    title: "Innovation",
+    description: "We leverage cutting-edge technology to enhance the real estate experience."
+  }
+];
+
+const timeline = [
+  { year: "2009", title: "Founded", description: "Started with a vision to revolutionize luxury real estate." },
+  { year: "2012", title: "Expansion", description: "Opened offices in Beverly Hills and Malibu." },
+  { year: "2016", title: "Recognition", description: "Named Top Luxury Brokerage by Forbes." },
+  { year: "2020", title: "Innovation", description: "Launched virtual tour technology platform." },
+  { year: "2024", title: "Milestone", description: "Reached $2 billion in lifetime property sales." }
+];
+---
+
+<BaseLayout title="About" description="Learn about Luxe Estates, our mission, and our team of expert real estate professionals dedicated to finding your dream property.">
+  <Navigation client:load />
+  
+  <!-- Hero Section -->
+  <section class="pt-32 pb-24 relative overflow-hidden hero-gradient">
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-float" />
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-600/20 rounded-full blur-3xl" />
+    </div>
+    
+    <div class="container-premium relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="badge badge-gold mb-4">Our Story</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+            Redefining <span class="text-gradient">Luxury</span> Real Estate
+          </h1>
+          <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+            Since 2009, Luxe Estates has been the premier destination for discerning clients seeking exceptional properties. Our commitment to excellence, personalized service, and deep market expertise sets us apart in the world of luxury real estate.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/properties" class="btn-primary">
+              Explore Properties
+            </a>
+            <a href="/contact" class="btn-secondary">
+              Meet Our Team
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square rounded-3xl overflow-hidden glass">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=800&fit=crop"
+              alt="Luxury Estate"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 w-48 h-48 rounded-2xl overflow-hidden glass border-4 border-primary-900">
+            <img
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&h=300&fit=crop"
+              alt="Interior"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="section-padding relative">
+    <div class="container-premium">
+      <div class="text-center mb-16">
+        <span class="badge badge-gold mb-4">Our Values</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+          What <span class="text-gradient">Drives Us</span>
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Our core values guide every interaction and decision, ensuring we deliver the exceptional service you deserve.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {values.map((value, index) => (
+          <div class="card-premium p-8 text-center group animate-on-scroll" style={`animation-delay: ${index * 100}ms`}>
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl glass-light flex items-center justify-center text-accent-500 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+              <Fragment set:html={value.icon} />
+            </div>
+            <h3 class="text-xl font-display font-semibold text-white mb-3">{value.title}</h3>
+            <p class="text-slate-400 text-sm">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="section-padding relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-accent-600/5 via-transparent to-accent-600/5" />
+    
+    <div class="container-premium relative">
+      <div class="text-center mb-16">
+        <span class="badge badge-gold mb-4">Our Journey</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+          15 Years of <span class="text-gradient">Excellence</span>
+        </h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-accent-500/50 via-accent-500/20 to-transparent" />
+          
+          {timeline.map((item, index) => (
+            <div class={`relative flex items-center gap-8 mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div class={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                <div class="glass rounded-2xl p-6 inline-block">
+                  <span class="text-accent-500 font-bold text-lg">{item.year}</span>
+                  <h3 class="text-xl font-display font-semibold text-white mt-2">{item.title}</h3>
+                  <p class="text-slate-400 text-sm mt-2">{item.description}</p>
+                </div>
+              </div>
+              
+              <!-- Center Dot -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-accent-500 border-4 border-primary-900 z-10" />
+              
+              <div class="flex-1 hidden md:block" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <StatsCounter client:visible />
+
+  <!-- Team Section -->
+  <section class="section-padding relative">
+    <div class="container-premium">
+      <div class="text-center mb-16">
+        <span class="badge badge-gold mb-4">Our Team</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+          Meet the <span class="text-gradient">Experts</span>
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          Our team of seasoned professionals brings decades of combined experience and a passion for exceptional service.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {teamMembers.map((member, index) => (
+          <div class="card-premium group animate-on-scroll overflow-hidden" style={`animation-delay: ${index * 100}ms`}>
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/50 to-transparent" />
+              
+              <!-- Social Links on Hover -->
+              <div class="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                <a href="#" class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-white hover:text-accent-500 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-white hover:text-accent-500 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="p-6 text-center">
+              <h3 class="text-xl font-display font-semibold text-white mb-1">{member.name}</h3>
+              <p class="text-accent-500 text-sm font-medium mb-3">{member.role}</p>
+              <p class="text-slate-400 text-sm">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-accent-600/20 via-accent-500/10 to-accent-600/20" />
+    <div class="container-premium relative">
+      <div class="glass rounded-3xl p-8 md:p-16 text-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+          Let's Work <span class="text-gradient">Together</span>
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mb-8">
+          Whether you're buying, selling, or investing, our team is ready to help you achieve your real estate goals.
+        </p>
+        <a href="/contact" class="btn-primary inline-flex items-center gap-2">
+          Get in Touch
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:load />
+</BaseLayout>

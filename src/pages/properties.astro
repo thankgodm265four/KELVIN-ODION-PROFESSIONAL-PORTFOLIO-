@@ -1,0 +1,344 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/Navigation";
+import PropertyCard from "../components/PropertyCard";
+import Footer from "../components/Footer";
+
+const allProperties = [
+  {
+    id: 1,
+    title: "Oceanfront Villa Estate",
+    address: "1234 Pacific Coast Hwy, Malibu, CA 90265",
+    price: 8500000,
+    bedrooms: 6,
+    bathrooms: 7,
+    sqft: 8200,
+    badge: "Featured",
+    isNew: true,
+  },
+  {
+    id: 2,
+    title: "Modern Penthouse Suite",
+    address: "999 Wilshire Blvd, Beverly Hills, CA 90212",
+    price: 4200000,
+    bedrooms: 4,
+    bathrooms: 4,
+    sqft: 4500,
+    badge: "Luxury",
+    isNew: false,
+  },
+  {
+    id: 3,
+    title: "Mediterranean Dream Home",
+    address: "567 Sunset Dr, Hollywood Hills, CA 90069",
+    price: 6750000,
+    bedrooms: 5,
+    bathrooms: 6,
+    sqft: 6100,
+    badge: "Hot",
+    isNew: true,
+  },
+  {
+    id: 4,
+    title: "Contemporary Smart Home",
+    address: "789 Innovation Way, Palo Alto, CA 94301",
+    price: 3900000,
+    bedrooms: 4,
+    bathrooms: 3,
+    sqft: 3800,
+    badge: "New",
+    isNew: true,
+  },
+  {
+    id: 5,
+    title: "Lakefront Retreat",
+    address: "456 Lakeview Dr, Lake Tahoe, CA 96150",
+    price: 5200000,
+    bedrooms: 5,
+    bathrooms: 5,
+    sqft: 5400,
+    badge: "Exclusive",
+    isNew: false,
+  },
+  {
+    id: 6,
+    title: "Urban Luxury Loft",
+    address: "321 Arts District, Downtown LA, CA 90013",
+    price: 2800000,
+    bedrooms: 3,
+    bathrooms: 3,
+    sqft: 2900,
+    badge: "Featured",
+    isNew: false,
+  },
+  {
+    id: 1,
+    title: "Hillside Mansion",
+    address: "888 Skyline Blvd, San Francisco, CA 94132",
+    price: 7200000,
+    bedrooms: 7,
+    bathrooms: 8,
+    sqft: 9500,
+    badge: "Premium",
+    isNew: true,
+  },
+  {
+    id: 2,
+    title: "Beachfront Bungalow",
+    address: "234 Shoreline Dr, Santa Monica, CA 90401",
+    price: 3500000,
+    bedrooms: 3,
+    bathrooms: 3,
+    sqft: 2800,
+    badge: "Hot",
+    isNew: false,
+  },
+  {
+    id: 3,
+    title: "Classic Victorian Estate",
+    address: "567 Heritage Lane, Pasadena, CA 91101",
+    price: 4800000,
+    bedrooms: 5,
+    bathrooms: 4,
+    sqft: 5200,
+    badge: "Historic",
+    isNew: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Properties"
+  description="Browse our exclusive collection of luxury properties. Find your perfect home among our curated listings of premium real estate."
+>
+  <Navigation client:load />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 relative overflow-hidden hero-gradient">
+    <div class="absolute inset-0 opacity-30">
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl"
+      >
+      </div>
+    </div>
+
+    <div class="container-premium relative text-center">
+      <span class="badge badge-gold mb-4">Our Portfolio</span>
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6"
+      >
+        Luxury <span class="text-gradient">Properties</span>
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+        Discover an exceptional collection of premium homes, each offering
+        unique character and unparalleled luxury.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="py-8 sticky top-16 z-40">
+    <div class="container-premium">
+      <div class="glass rounded-2xl p-4 md:p-6">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <!-- Location -->
+          <div>
+            <label class="block text-xs text-slate-500 mb-1 px-1"
+              >Location</label
+            >
+            <input
+              type="text"
+              placeholder="Enter city or area"
+              class="input-premium w-full text-sm"
+            />
+          </div>
+
+          <!-- Property Type -->
+          <div>
+            <label class="block text-xs text-slate-500 mb-1 px-1"
+              >Property Type</label
+            >
+            <select
+              class="input-premium w-full text-sm appearance-none cursor-pointer"
+            >
+              <option value="">All Types</option>
+              <option value="house">House</option>
+              <option value="apartment">Apartment</option>
+              <option value="villa">Villa</option>
+              <option value="penthouse">Penthouse</option>
+              <option value="condo">Condo</option>
+            </select>
+          </div>
+
+          <!-- Price Range -->
+          <div>
+            <label class="block text-xs text-slate-500 mb-1 px-1"
+              >Price Range</label
+            >
+            <select
+              class="input-premium w-full text-sm appearance-none cursor-pointer"
+            >
+              <option value="">Any Price</option>
+              <option value="0-1000000">Under $1M</option>
+              <option value="1000000-3000000">$1M - $3M</option>
+              <option value="3000000-5000000">$3M - $5M</option>
+              <option value="5000000-10000000">$5M - $10M</option>
+              <option value="10000000+">$10M+</option>
+            </select>
+          </div>
+
+          <!-- Bedrooms -->
+          <div>
+            <label class="block text-xs text-slate-500 mb-1 px-1"
+              >Bedrooms</label
+            >
+            <select
+              class="input-premium w-full text-sm appearance-none cursor-pointer"
+            >
+              <option value="">Any</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+
+          <!-- Search Button -->
+          <div class="flex items-end">
+            <button
+              class="btn-primary w-full flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Header -->
+  <section class="py-6">
+    <div class="container-premium">
+      <div
+        class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+      >
+        <div>
+          <p class="text-slate-400">
+            Showing <span class="text-white font-semibold"
+              >{allProperties.length}</span
+            > properties
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <label class="text-sm text-slate-500">Sort by:</label>
+          <select
+            class="input-premium text-sm appearance-none cursor-pointer pr-8"
+          >
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest First</option>
+            <option value="sqft">Square Feet</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Grid -->
+  <section class="pb-16">
+    <div class="container-premium">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          allProperties.map((property, index) => (
+            <div
+              class="animate-on-scroll"
+              style={`animation-delay: ${(index % 6) * 100}ms`}
+            >
+              <PropertyCard
+                client:visible
+                id={property.id}
+                title={property.title}
+                address={property.address}
+                price={property.price}
+                bedrooms={property.bedrooms}
+                bathrooms={property.bathrooms}
+                sqft={property.sqft}
+                badge={property.badge}
+                isNew={property.isNew}
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center items-center gap-2 mt-16">
+        <button
+          class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-slate-400 hover:text-white hover:border-accent-500 transition-all"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button
+          class="w-10 h-10 rounded-xl bg-gradient-to-r from-accent-500 to-accent-600 text-primary-900 font-semibold"
+          >1</button
+        >
+        <button
+          class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-slate-400 hover:text-white hover:border-accent-500 transition-all"
+          >2</button
+        >
+        <button
+          class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-slate-400 hover:text-white hover:border-accent-500 transition-all"
+          >3</button
+        >
+        <span class="text-slate-500 px-2">...</span>
+        <button
+          class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-slate-400 hover:text-white hover:border-accent-500 transition-all"
+          >8</button
+        >
+        <button
+          class="w-10 h-10 rounded-xl glass-light flex items-center justify-center text-slate-400 hover:text-white hover:border-accent-500 transition-all"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:load />
+</BaseLayout>
