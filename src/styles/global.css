@@ -31,8 +31,8 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--color-white);
-  color: var(--color-gray-800);
+  background-color: #000000;
+  color: #ffffff;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,18 +48,18 @@ h6 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
   line-height: 1.2;
-  color: var(--color-navy);
+  color: #ffffff;
 }
 
 /* ===== Buttons ===== */
 .btn-gold {
-  background-color: var(--color-gold);
-  color: var(--color-navy);
+  background-color: #F2B233;
+  color: #000000;
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 9999px;
   transition: all var(--transition-normal);
-  box-shadow: 0 4px 15px rgba(242, 178, 51, 0.3);
+  box-shadow: 0 4px 15px rgba(242, 178, 51, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -71,13 +71,13 @@ h6 {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2), transparent);
   transition: left var(--transition-slow);
 }
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(242, 178, 51, 0.5);
+  box-shadow: 0 8px 25px rgba(242, 178, 51, 0.6);
   background-color: #d9a02e;
 }
 
@@ -102,18 +102,19 @@ h6 {
 
 /* ===== Cards ===== */
 .card {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   transition: all var(--transition-normal);
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  border-color: var(--color-gold);
+  box-shadow: 0 20px 25px -5px rgba(242, 178, 51, 0.2);
+  border-color: #F2B233;
 }
 
 /* ===== Scroll Animations ===== */
@@ -133,7 +134,7 @@ h6 {
   display: inline-block;
   width: 3px;
   height: 1.2em;
-  background-color: var(--color-primary);
+  background-color: #F2B233;
   margin-left: 2px;
   animation: blink 1s step-end infinite;
 }
@@ -162,7 +163,7 @@ h6 {
 }
 
 .section-alt {
-  background-color: var(--color-gray-50);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* ===== Container ===== */
@@ -191,8 +192,8 @@ h6 {
   top: 0;
   width: 3rem;
   height: 3rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-navy));
-  color: white;
+  background: linear-gradient(135deg, #F2B233, #d9a02e);
+  color: #000000;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -221,20 +222,20 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: #F2B233;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-navy);
+  background: #d9a02e;
 }
 
 /* ===== Selection ===== */
 ::selection {
-  background: rgba(47, 111, 178, 0.2);
-  color: var(--color-navy);
+  background: rgba(242, 178, 51, 0.3);
+  color: #ffffff;
 }

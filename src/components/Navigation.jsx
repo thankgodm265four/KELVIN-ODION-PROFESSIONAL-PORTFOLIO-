@@ -23,8 +23,8 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'py-3 bg-white shadow-lg'
-        : 'py-5 bg-transparent'
+        ? 'py-3 bg-black/90 backdrop-blur-md shadow-lg border-b border-white/10'
+        : 'py-5 bg-black/50 backdrop-blur-sm'
         }`}
     >
       <div className="container-custom">
@@ -45,7 +45,7 @@ export default function Navigation() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="relative text-gray-600 hover:text-gold-500 font-medium transition-colors duration-300 py-2 group"
+                    className="relative text-white hover:text-gold-500 font-medium transition-colors duration-300 py-2 group"
                   >
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300" />
@@ -66,7 +66,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-navy-500 hover:text-gold-500 transition-colors"
+            className="lg:hidden p-2 text-white hover:text-gold-500 transition-colors"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
@@ -91,13 +91,13 @@ export default function Navigation() {
           className={`lg:hidden overflow-hidden transition-all duration-500 ${isMobileMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
             }`}
         >
-          <div className="bg-white rounded-xl shadow-lg p-6 space-y-4 border border-gray-100">
+          <div className="bg-black/80 backdrop-blur-md rounded-xl shadow-lg p-6 space-y-4 border border-white/10">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-gray-600 hover:text-gold-500 font-medium transition-colors py-2 border-b border-gray-100 last:border-0"
+                className="block text-white hover:text-gold-500 font-medium transition-colors py-2 border-b border-white/10 last:border-0"
               >
                 {link.label}
               </a>

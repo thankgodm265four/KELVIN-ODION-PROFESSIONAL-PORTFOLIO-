@@ -29,13 +29,13 @@ export default function Process() {
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-700 rounded-full text-sm font-medium mb-4">
+                    <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-500 rounded-full text-sm font-medium mb-4">
                         How I Work
                     </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy-500 mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
                         My Process
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-300 max-w-2xl mx-auto">
                         A systematic approach to delivering results that matter.
                     </p>
                 </div>
@@ -49,7 +49,7 @@ export default function Process() {
                                 className="relative pl-20 md:pl-24 group"
                             >
                                 {/* Number Circle */}
-                                <div className="absolute left-0 top-0 w-14 h-14 rounded-full bg-gradient-to-br from-gold-500 to-gray-800 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-gold transition-shadow duration-300">
+                                <div className="absolute left-0 top-0 w-14 h-14 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-black font-bold text-lg shadow-lg group-hover:shadow-gold transition-shadow duration-300">
                                     {step.number}
                                 </div>
 
@@ -59,11 +59,11 @@ export default function Process() {
                                 )}
 
                                 {/* Content */}
-                                <div className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow duration-300 border border-gray-100 group-hover:border-gold-500">
-                                    <h3 className="text-xl font-display font-semibold text-navy-500 mb-2">
+                                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow duration-300 border border-white/10 group-hover:border-gold-500">
+                                    <h3 className="text-xl font-display font-semibold text-white mb-2">
                                         {step.title}
                                     </h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-300">
                                         {step.description}
                                     </p>
                                 </div>

@@ -23,13 +23,13 @@ export default function About() {
 
                     {/* Content Side */}
                     <div>
-                        <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-700 rounded-full text-sm font-medium mb-4">
+                        <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-500 rounded-full text-sm font-medium mb-4">
                             About Me
                         </span>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy-500 mb-6">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
                             About Kelvin Odion
                         </h2>
-                        <div className="space-y-4 text-gray-600 leading-relaxed">
+                        <div className="space-y-4 text-gray-300 leading-relaxed">
                             <p>
                                 Kelvin Odion is a digital strategist and marketing specialist with hands-on experience helping brands build strong online presence, attract the right audience, and convert attention into results.
                             </p>
@@ -46,7 +46,7 @@ export default function About() {
                             {['Digital Strategy', 'Content Marketing', 'Copywriting', 'Social Media', 'Brand Building'].map((skill) => (
                                 <span
                                     key={skill}
-                                    className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-gold-500 hover:bg-gold-50 transition-colors cursor-default"
+                                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:border-gold-500 hover:text-gold-500 transition-colors cursor-default"
                                 >
                                     {skill}
                                 </span>

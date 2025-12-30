@@ -49,10 +49,10 @@ export default function Testimonial() {
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-700 rounded-full text-sm font-medium mb-4">
+                    <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-500 rounded-full text-sm font-medium mb-4">
                         Testimonials
                     </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy-500">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white">
                         Client Success Stories
                     </h2>
                 </div>
@@ -68,7 +68,7 @@ export default function Testimonial() {
                                     : 'opacity-0 absolute inset-0 translate-x-8'
                                     }`}
                             >
-                                <div className="bg-white border border-gold-100 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-gold">
+                                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-gold">
                                     {/* Decorative Elements */}
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/5 rounded-full blur-3xl" />
                                     <div className="absolute bottom-0 left-0 w-48 h-48 bg-gold-500/5 rounded-full blur-2xl" />
@@ -80,7 +80,7 @@ export default function Testimonial() {
                                         </svg>
 
                                         {/* Testimonial Quote */}
-                                        <blockquote className="text-xl md:text-2xl font-light leading-relaxed mb-8 text-navy-900">
+                                        <blockquote className="text-xl md:text-2xl font-light leading-relaxed mb-8 text-white">
                                             "{testimonial.quote}"
                                         </blockquote>
 
@@ -92,9 +92,9 @@ export default function Testimonial() {
                                                 </span>
                                             </div>
                                             <div>
-                                                <p className="font-semibold text-lg text-navy-900">— {testimonial.author}</p>
-                                                <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                                                <p className="text-gold-600 text-sm flex items-center gap-1">
+                                                <p className="font-semibold text-lg text-white">— {testimonial.author}</p>
+                                                <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                                                <p className="text-gold-500 text-sm flex items-center gap-1">
                                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                                                     </svg>
@@ -116,7 +116,7 @@ export default function Testimonial() {
                                 onClick={() => goToSlide(index)}
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeIndex
                                     ? 'bg-gold-500 w-8'
-                                    : 'bg-gray-300 hover:bg-gray-400'
+                                    : 'bg-white/30 hover:bg-white/50'
                                     }`}
                                 aria-label={`Go to testimonial ${index + 1}`}
                             />

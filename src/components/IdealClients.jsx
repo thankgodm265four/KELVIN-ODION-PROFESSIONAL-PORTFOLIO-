@@ -41,10 +41,10 @@ export default function IdealClients() {
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-700 rounded-full text-sm font-medium mb-4">
+                    <span className="inline-block px-4 py-2 bg-gold-500/10 text-gold-500 rounded-full text-sm font-medium mb-4">
                         Ideal Clients
                     </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy-500">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white">
                         I Work Best With
                     </h2>
                 </div>
@@ -55,12 +55,12 @@ export default function IdealClients() {
                         {clients.map((client, index) => (
                             <div
                                 key={index}
-                                className="flex items-center gap-4 bg-white p-5 rounded-xl border border-gray-100 hover:border-gold-500 hover:shadow-md transition-all duration-300 group"
+                                className="flex items-center gap-4 bg-white/5 backdrop-blur-sm p-5 rounded-xl border border-white/10 hover:border-gold-500 hover:shadow-md transition-all duration-300 group"
                             >
                                 <div className="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-white transition-all duration-300">
                                     {client.icon}
                                 </div>
-                                <p className="text-gray-700 font-medium">
+                                <p className="text-white font-medium">
                                     {client.text}
                                 </p>
                             </div>
