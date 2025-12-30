@@ -10,7 +10,7 @@ export default function About() {
                         <div className="relative z-10">
                             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-premium">
                                 <img
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop"
+                                    src="/kelvin.jpg"
                                     alt="Kelvin Odion"
                                     className="w-full h-full object-cover"
                                 />
