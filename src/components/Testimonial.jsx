@@ -8,15 +8,15 @@ export default function Testimonial() {
         {
             id: 1,
             quote: "Working with Kelvin completely changed how fast our ads convert. Nilax started selling quickly in Abuja thanks to his strategies. One of the best decisions we made in 2025.",
-            author: "G-Reality Company",
-            role: "Real Estate Brand",
+            author: "Nilax Cosmetics",
+            role: "Beauty & Skincare Brand",
             location: "Abuja, Nigeria"
         },
         {
             id: 2,
             quote: "I didn't know ads could convert this fast until I started working with Kelvin. Honestly, choosing to work with him has been one of the best decisions I've made in 2025. Nilax has been selling very well and fast in Abuja, all thanks to the strategies he implemented.",
-            author: "G-Reality Company",
-            role: "Real Estate Brand",
+            author: "Nilax Cosmetics",
+            role: "Beauty & Skincare Brand",
             location: "Abuja, Nigeria"
         },
         {
